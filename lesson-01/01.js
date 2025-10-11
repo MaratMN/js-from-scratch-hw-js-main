@@ -4,10 +4,11 @@
 // your code
 //const FirstNumber = 1
 let a = 0
+let b = 20
 let sum = 0
 //let number = FirstNumber
 
-while (a < 20 ) {
+while (a < b ) {
     a=a+1
     sum=sum+a
     console.log("Сумма=" + sum)
