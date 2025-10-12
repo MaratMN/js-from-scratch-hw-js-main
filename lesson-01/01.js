@@ -11,5 +11,5 @@ let sum = 0
 while (a < b ) {
     a=a+1
     sum=sum+a
-    console.log("Сумма=" + sum)
-}
+};
+console.log("Сумма чисел от 1 до 20 = " + sum)

@@ -5,4 +5,18 @@
 */
 
 // your code
-let sum
+let a = 0
+let b = 20
+let sum = 0
+//let number = FirstNumber
+
+while (a < b ) {
+    a=a+1
+    if(a%2!==0) {
+        sum = sum + a
+    }
+};
+console.log(sum)
+
+// sum = sum+a
+//  console.log("Сумма нечетных чисел=" + sum)
