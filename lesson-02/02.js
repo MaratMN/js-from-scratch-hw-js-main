@@ -10,11 +10,13 @@ const min = 1
 const max = 6
 let dice1 = Math.floor(Math.random()*(max - min + 1) + min) // your code
 let dice2 = Math.floor(Math.random()*(max - min + 1) + min) // your code
-let isWinningDouble = false // your code
+let isWinningDouble
+// your code
 
-
-console.log('Первый бросок: ' + dice1)
-console.log('Второй бросок: ' + dice2)
+if (dice1 > 0) {
+console.log('Первый бросок: ' + dice1)}
+if (dice2 > 0) {
+console.log('Второй бросок: ' + dice2)}
 
 if (dice1 === dice2 && dice1 > 3)
 {
