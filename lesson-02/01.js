@@ -7,6 +7,8 @@
 * - А также пользователь должен обладать специальным разрешением (hasSpecialPermission) или временным пропуском (hasTemporaryPass)
 */
 
+// (isAdmin || isVerifiedUser) && (hasSpecialPermission || hasTemporaryPass )
+
 // тестовые данные (значения можно менять)
 const isAdmin = true
 const isVerifiedUser = false
@@ -17,13 +19,12 @@ let isAccess = false
 
 // your code
 if (isAdmin === true && hasSpecialPermission === true ||
-    isVerifiedUser === true && hasTemporaryPass === true||
+    isVerifiedUser === true && hasTemporaryPass === true ||
     isAdmin === true && hasTemporaryPass === true ||
-    isVerifiedUser === true && hasSpecialPermission === true)
-{console.log('Доступ разрешен')
+    isVerifiedUser === true && hasSpecialPermission === true) {
+    console.log('Доступ разрешен')
     isAccess = true
-}
-else {
+} else {
     console.log('Доступ запрещен')
     isAccess = false
 }
