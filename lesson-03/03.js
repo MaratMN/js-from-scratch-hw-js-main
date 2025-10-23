@@ -1,7 +1,7 @@
 // Разработайте функцию findLargest, которая принимает три числа и возвращает наибольшее из них.
-let a= 10
-let b= 8
-let c= 4
+let a= 1
+let b= 2
+let c= 3
 
 function findLargest() {
 
