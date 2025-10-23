@@ -1,17 +1,19 @@
 // Разработайте функцию findLargest, которая принимает три числа и возвращает наибольшее из них.
-let a= 3
-let b= 2
-let c= -2
+let a = -1
+let b = 1
+let c = 1
 
 function findLargest() {
-
+let largest
     if (a>b && a>c)
-        return a
+        largest = a
     else if (b>a && b>c)
-    return b
+        largest = b
     else if(c >b && c>a)
-        return c
+        largest = c
     else if (a=b=c)
-        return a
+        largest = a
+    return largest
 }
+findLargest()
  console.log(findLargest())
