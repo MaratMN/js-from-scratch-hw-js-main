@@ -2,7 +2,7 @@
 // let a
 // let b
 // let c
-function findLargest() {
+function findLargest(a,b,c) {
 let largest
     if (a>b && a>c)
         largest = a
@@ -10,9 +10,10 @@ let largest
         largest = b
     else if(c >b && c>a)
         largest = c
-    else if (a=b=c)
+    else if (a===b && b===c)
         largest = a
     return largest
 }
-findLargest()
- console.log(findLargest())
+// findLargest(1,2,0)
+
+ console.log(findLargest(-2,1,0))
