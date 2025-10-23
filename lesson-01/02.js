@@ -6,13 +6,13 @@
 */
 
 // your code
-let factorial = 1
-let a= 0
-let b = 1
-
-while (a < 10){
-    a= a+b
-    factorial = factorial*a
-
-}
-console.log("Факториал числа 10 = " + factorial)
+// let factorial = 1
+// let a= 0
+// let b = 1
+//
+// while (a < 10){
+//     a= a+b
+//     factorial = factorial*a
+//
+// }
+// console.log("Факториал числа 10 = " + factorial)

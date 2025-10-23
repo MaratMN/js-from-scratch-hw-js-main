@@ -14,11 +14,11 @@
 // };
 // console.log("Сумма чисел от 1 до 20 = " + sum)
 
-
-let sum = 0
-let i = 1
-while (i <= 100) {
-    sum += i
+//
+// let sum = 0
+// let i = 1
+// while (i <= 100) {
+//     sum += i
 
 
 }

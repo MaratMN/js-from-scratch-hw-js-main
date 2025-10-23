@@ -10,21 +10,21 @@
 // (isAdmin || isVerifiedUser) && (hasSpecialPermission || hasTemporaryPass )
 
 // тестовые данные (значения можно менять)
-const isAdmin = true
-const isVerifiedUser = false
-const hasSpecialPermission = true
-const hasTemporaryPass = false
-
-let isAccess = false
-
-// your code
-if (isAdmin === true && hasSpecialPermission === true ||
-    isVerifiedUser === true && hasTemporaryPass === true ||
-    isAdmin === true && hasTemporaryPass === true ||
-    isVerifiedUser === true && hasSpecialPermission === true) {
-    console.log('Доступ разрешен')
-    isAccess = true
-} else {
-    console.log('Доступ запрещен')
-    isAccess = false
-}
+// const isAdmin = true
+// const isVerifiedUser = false
+// const hasSpecialPermission = true
+// const hasTemporaryPass = false
+//
+// let isAccess = false
+//
+// // your code
+// if (isAdmin === true && hasSpecialPermission === true ||
+//     isVerifiedUser === true && hasTemporaryPass === true ||
+//     isAdmin === true && hasTemporaryPass === true ||
+//     isVerifiedUser === true && hasSpecialPermission === true) {
+//     console.log('Доступ разрешен')
+//     isAccess = true
+// } else {
+//     console.log('Доступ запрещен')
+//     isAccess = false
+// }
