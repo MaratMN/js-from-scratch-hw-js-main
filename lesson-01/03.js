@@ -5,9 +5,9 @@
 */
 
 // your code
-let a = 0
-let b = 20
-let sum = 0
+// let a = 0
+// let b = 20
+// let sum = 0
 //let number = FirstNumber
 
 // while (a < b ) {

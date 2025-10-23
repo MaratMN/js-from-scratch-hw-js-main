@@ -6,11 +6,11 @@
 
 * Для успешного прохождения тестов не меняйте названия переменных!
 */
-const min = 1
-const max = 6
-let dice1 = Math.floor(Math.random() * (max - min + 1) + min) // your code
-let dice2 = Math.floor(Math.random() * (max - min + 1) + min) // your code
-let isWinningDouble
+// const min = 1
+// const max = 6
+// let dice1 = Math.floor(Math.random() * (max - min + 1) + min) // your code
+// let dice2 = Math.floor(Math.random() * (max - min + 1) + min) // your code
+// let isWinningDouble
 // your code
 
 // if (dice1 > 0) {
