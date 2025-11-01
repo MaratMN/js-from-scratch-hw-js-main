@@ -37,17 +37,3 @@ return newArr
 }
 
 console.log(findUniqueElements([1, 2, 3, 3,5,8,8]))
-//
-// function findUniqueElements(arr) {
-//     const uniqueElements = ;
-//
-//     for(let i = 0; i < arr.length; i++) {
-//         // Проверяем, встречается ли элемент ранее в исходном массиве
-//         if(!includesElement(arr, arr[i], i + 1) &&
-//             !includesElement(uniqueElements, arr[i])) {
-//             uniqueElements.push(arr[i]);
-//         }
-//     }
-//
-//     return uniqueElements;
-// }
