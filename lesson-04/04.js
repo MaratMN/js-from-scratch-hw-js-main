@@ -22,3 +22,4 @@ let newStr = '';
 }
 
 console.log(doubleEachCharacter('MRT'))
+
