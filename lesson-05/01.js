@@ -1,5 +1,6 @@
 /*
-Реализовать метод `addResource`, который будет добавлять указанное количество ресурсов к уже существующим ресурсам в объекте `game`.
+Реализовать метод `addResource`, который будет добавлять указанное количество ресурсов к уже
+существующим ресурсам в объекте `game`.
 
 Требования к методу:
 
@@ -14,16 +15,16 @@ const game = {
     resources: {
         gold: 250,
         lumber: 100,
+
     },
     addResource(resource, amount) {
-        if (resource === "gold") {
-            game.resources.gold = game.resources.gold + amount;}
-        if (resource === "lumber") {
-                game.resources.lumber = game.resources.lumber + amount;
-            }
-        else {console.log("Invalid resource")}
+        const resourse = this.resources[resource]
+        if(resourse !==undefined) {
+            this.resources[resource] =resourse + amount
+            return
         }
-    }
+        console.log("Invalid resource")
+    }}
 
 
 
@@ -31,3 +32,13 @@ game.addResource("gold", 40);
 game.addResource("lumber", 30);
 
 console.log(game);
+
+// addResource(resource, amount) {
+//     if (resource === "gold") {
+//         game.resources.gold = game.resources.gold + amount;}
+//     if (resource === "lumber") {
+//         game.resources.lumber = game.resources.lumber + amount;
+//     }
+//     else {console.log("Invalid resource")}
+// }
+// }
