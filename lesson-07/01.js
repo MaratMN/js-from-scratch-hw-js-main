@@ -1,5 +1,6 @@
 /*
-В этом задании вам предстоит разработать интерактивный слайдер, который позволит пользователю переключаться между созданными нейросетью изображениями веб-технологий.
+В этом задании вам предстоит разработать интерактивный слайдер,
+который позволит пользователю переключаться между созданными нейросетью изображениями веб-технологий.
 Изучите файл index.html. В этом задании надо будет работать с секцией "Урок 6". Разметка уже написано - нужно добавить только js-код.
 
 Задание:
@@ -17,3 +18,28 @@ const WEB_TECH_IMAGES = [
   'https://production-it-incubator.s3.eu-central-1.amazonaws.com/file-manager/Image/c8a1f4a6-1337-4899-bdfd-a8c9c7bb806a_css-magic-logo.jpg',
   'https://production-it-incubator.s3.eu-central-1.amazonaws.com/file-manager/Image/784380b9-6937-42a6-bdfe-869835820234_html-magic-logo.jpg',
 ]
+const img = document.querySelector("img")
+const buttonNext = document.getElementById("next-button")
+const buttonPrev= document.getElementById("prev-button")
+let numImage = 0
+img.src = WEB_TECH_IMAGES[numImage]
+
+buttonNext.addEventListener('click', () => {
+    numImage++
+    if (numImage >= WEB_TECH_IMAGES.length) {
+        numImage = 0
+    }
+    console.log(numImage >= WEB_TECH_IMAGES.length)
+    console.log(numImage)
+    img.src = WEB_TECH_IMAGES[numImage]
+})
+
+buttonPrev.addEventListener('click', () => {
+    numImage--
+    if (numImage < 0 ) {
+        numImage = 2
+    }
+    console.log(numImage >= WEB_TECH_IMAGES.length)
+    console.log(numImage)
+    img.src = WEB_TECH_IMAGES[numImage]
+})

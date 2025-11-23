@@ -29,12 +29,18 @@ const filter = (array,callback) => {
     for (let i = 0; i <array.length; i++) {
         const element = array[i]
         const index= i;
-        if (callback(element, index)) {
+        const result = callback(element, index); //fuu()
+        console.log(result)
+        if (result) {
             newArray.push(element);
         }
     } return newArray;
 }
 
+
+// let i = filter(array,callback)
+// let sum = (a, b) => a + b;
+// sum(1,2)
 // const numbers = [1, 2, 3, 4, 5]
 //
 // const oddNumbers = filter(numbers, (element, index) => {
@@ -42,3 +48,7 @@ const filter = (array,callback) => {
 // });
 //
 // console.log(oddNumbers) // Должен вывести: [1, 3, 5]
+
+let fuu = string => string.length >4
+const arr=['jfjfjf', 'jdjdjd','jfjfj','df','d']
+console.log(filter(arr,fuu));

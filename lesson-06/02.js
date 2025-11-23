@@ -31,12 +31,18 @@ const map = (array,callback) => {
     for (let i = 0; i <array.length; i++) {
         const element = array[i]
         const index= i;
+        const result = callback(element, index); // 'jfjfjf'.length >4 => true
         // if (callback(element, index)) {
-            newArray.push(callback(element, index));
+
+            newArray.push(result);
+
         }
      return newArray;
 }
 
+let fuu = string => string.length
+const arr=['jfjfjf', 'jdjdjd','jfjfj','df','d']
+console.log(map(arr,fuu));
 // const numbers = [1, 2, 3, 4, 5]
 //
 // const doubledNumbers = map(numbers, (element, index) => {
