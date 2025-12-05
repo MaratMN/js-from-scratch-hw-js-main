@@ -43,3 +43,45 @@ buttonPrev.addEventListener('click', () => {
     console.log(numImage)
     img.src = WEB_TECH_IMAGES[numImage]
 })
+
+
+// const buttonPrev = document.getElementById("prev-button")
+
+
+// buttonPrev.addEventListener("click", function (){
+//     // const image = document.getElementById("img")
+//     // for (let i = 0; i < WEB_TECH_IMAGES.length; i++){
+//     //     image.src = WEB_TECH_IMAGES[i]
+//
+//     })
+// // } )
+//
+// const buttonNext = document.getElementById("next-button")
+// buttonNext.addEventListener("click", function (){
+//     const image = document.getElementById("img")
+//     for (let i = 0; i < WEB_TECH_IMAGES.length; i++){
+//
+//         image.src = WEB_TECH_IMAGES[i] }
+// } )
+//
+//
+// const imageList = [
+//     'https://w7.pngwing.com/pngs/630/871/png-transparent-heart-eyes-emoji-emoji-heart-iphone-love-emoji-smiley-sticker-emoticon-thumbnail.png',
+//     'https://w7.pngwing.com/pngs/407/764/png-transparent-yellow-smiley-emoji-emoji-computer-icons-emoticon-sunglasses-emoji-smiley-sticker-glasses.png',
+//     'https://www.pngfind.com/pngs/m/238-2383371_sad-emoticon-png-new-iphone-emojis-transparent-png.png'
+// ]
+// const img = document.querySelector('.img')
+// const next = document.getElementById('next')
+// var numImage = 0
+// img.src = imageList[numImage]
+//
+// next.addEventListener('click', () => {
+//     numImage++
+//     if (numImage >= imageList.length) {
+//         numImage = 0
+//     }
+//     console.log(numImage >= imageList.length)
+//     console.log(numImage)
+//     img.src = imageList[numImage]
+// })
+//

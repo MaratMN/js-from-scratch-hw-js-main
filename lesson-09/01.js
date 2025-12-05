@@ -59,6 +59,7 @@ function updateCartDisplay() {
     petSpanElement.classList.add('pet')
     petSpanElement.textContent = pet.title
     cartList.append(petSpanElement)
+
   }
 }
 
@@ -68,3 +69,15 @@ clearCartButton.addEventListener('click', function () {
 })
 
 // Твой код:
+petShop.addEventListener('click', function (event) {
+    cart.push(event.target.id)
+    updateCartDisplay()
+    if (cart.length >= 3){
+        cart.length = 3
+        messageBox.textContent = 'Вы не можете добавить более 3 питомцев'
+        updateCartDisplay()
+    }
+    else if (cart.length < 3){
+       messageBox.textContent =''
+    }
+})
