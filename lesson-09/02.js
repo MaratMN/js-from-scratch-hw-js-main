@@ -7,7 +7,8 @@
 
 1. Добавить обработчик событий для кнопки "Старт":
 
-- При нажатии на кнопку "Старт" должен начаться обратный отсчёт с 3 до 1. Значение счётчика должно отображаться в элементе countdownDisplay. Цифра 3 должна отобразиться немедленно.
+- При нажатии на кнопку "Старт" должен начаться обратный отсчёт с 3 до 1. Значение счётчика должно отображаться в элементе countdownDisplay.
+Цифра 3 должна отобразиться немедленно.
 - Каждую секунду значение счётчика должно уменьшаться на 1.
 - Когда счётчик достигнет 0, вместо 0 должен отображаться эмодзи ракеты "🚀" и таймер должен быть остановлен. Пользователь видит: 3 -> 2 -> 1 -> 🚀
 
@@ -33,11 +34,39 @@ let isTimerStarted = false
 let timerId
 
 startButton.addEventListener('click', () => {
-  let counter = 3
+    if (isTimerStarted){ // == true
+        return
+    }
+    let counter = 3
+    isTimerStarted = true
+// timerId = counter
+//     if (counter !== 0) {
+        countdownDisplay.textContent = counter
+        timerId = setInterval(() =>{
+            counter--
+            countdownDisplay.textContent = counter
+            if (counter === 0) {
+
+                clearInterval(timerId)
+                isTimerStarted = false
+                countdownDisplay.textContent = "🚀"
+            }
+
+        }, 1000)
+
+    // }
+
 
   // your code
 })
 
 cancelButton.addEventListener('click', () => {
   // your code
+    if (!isTimerStarted){  // ==false
+        return
+    }
+    console.log('STOP')
+    clearInterval(timerId)
+    isTimerStarted = false
+    countdownDisplay.textContent = 'Отменено'
 })
