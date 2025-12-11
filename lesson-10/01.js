@@ -22,14 +22,18 @@
 */
 
 const model = {
-  movies: [],
-  addMovie(title, description) {
-    const id = Math.random()
-    const newMovie = { id, title, description }
-    this.movies.push(newMovie)
-    view.renderMovies(this.movies)
-  },
-  // your code
+    movies: [],
+    addMovie(title, description) {
+        const id = Math.random()
+        const newMovie = {id, title, description}
+        this.movies.push(newMovie)
+        view.renderMovies(this.movies)
+    },
+    deleteMovie(movieId) {
+        this.movies = this.movies.filter((movie) => movie.id !== movieId)
+
+        view.renderMovies(this.movies)   // your code
+    },
 }
 
 const view = {
@@ -49,8 +53,13 @@ const view = {
       inputTitle.value = ''
       inputDescription.value = ''
     })
-
-    // your code
+      const list = document.querySelector('.list')
+      list.addEventListener('click', (event) => {
+      if (event.target.classList.contains('delete-button')) {
+          const movieId = +event.target.parentElement.id
+          controller.deleteMovie(movieId)
+      }
+  })// your code
   },
   renderMovies(movies) {
     const list = document.querySelector('.list')
@@ -82,17 +91,19 @@ const view = {
 }
 
 const controller = {
-  addMovie(title, description) {
-    if (title.trim() !== '' && description.trim() !== '') {
-      model.addMovie(title, description)
-      view.displayMessage('Фильм добавлен успешно!')
-    } else {
-      view.displayMessage('Заполните все поля!', true)
-    }
-  },
-  // your code
+    addMovie(title, description) {
+        if (title.trim() !== '' && description.trim() !== '') {
+            model.addMovie(title, description)
+            view.displayMessage('Фильм добавлен успешно!')
+        } else {
+            view.displayMessage('Заполните все поля!', true)
+        }
+    },
+    deleteMovie(movieId) {
+        model.deleteMovie(movieId)
+        view.displayMessage('Фильм успешно удален!') // your code
+    },
 }
-
 function init() {
   view.init()
 }
